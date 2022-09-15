@@ -1,0 +1,55 @@
+/* Pretty Stuff? */
+
+
+
+/* Arrow */
+
+.arrow {
+  position: relative;
+  margin: 0 auto;
+  width: 60px;
+   transform: rotate(-54deg);
+  -webkit-transform: rotate(-54deg);
+  -moz-transform: rotate(-54deg);
+  -ms-transform: rotate(-54deg);
+}
+
+.arrow .curve {
+  border: 9px solid #be5f4b;
+  border-color: transparent transparent transparent #be5f4b;
+  height: 300px;
+  width: 1200px;
+  border-radius: 230px 0 0 150px;
+}
+
+.arrow .point {
+  position: absolute;
+  left: 32px;
+  top: 257px;
+}
+
+.arrow .point:before,
+.arrow .point:after {
+  border: 4px solid #be5f4b;
+  height: 25px;
+  content: "";
+  position: absolute;
+}
+
+.arrow .point:before {
+  top: -11px;
+  left: -11px;
+  transform: rotate(-74deg);
+  -webkit-transform: rotate(-74deg);
+  -moz-transform: rotate(-74deg);
+  -ms-transform: rotate(-74deg);
+}
+
+.arrow .point:after {
+  top: -20px;
+  left: 5px;
+  transform: rotate(12deg);
+  -webkit-transform: rotate(12deg);
+  -moz-transform: rotate(12deg);
+  -ms-transform: rotate(12deg);
+}
