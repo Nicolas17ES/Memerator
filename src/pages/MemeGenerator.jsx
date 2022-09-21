@@ -1,11 +1,12 @@
-import { useState,  useEffect, useContext } from 'react';
+import {useContext } from 'react';
 import MemeratorContext from '../context/MemeratorContext'
 
 
 // blocks to show
 import Start from '../components/start/Start'
 import Upload from '../components/upload/Upload'
-import MemeText from '../components/shared/memeText/MemeText'
+import Uploaded from '../components/uploaded/Uploaded'
+
 
 function MemeGenerator() {
 
@@ -25,6 +26,20 @@ function MemeGenerator() {
         return (
         <div className="memerator">
             <Upload/>
+        </div>
+        )
+    }
+    else if (status === 'uploaded') {
+        return (
+        <div className="memerator">
+            <Uploaded/>
+        </div>
+        )
+    }
+    else if (status === 'generated') {
+        return (
+        <div className="memerator">
+            <h1>GENERATED</h1>
         </div>
         )
     }

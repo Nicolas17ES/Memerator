@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Route, Routes, useLocation} from 'react-router-dom'
 import {MemeratorProvider} from './context/MemeratorContext'
 import NavBar from './components/shared/navBar/NavBar'
+import Loader from './components/shared/loader/Loader'
 import MemeGenerator from './pages/MemeGenerator'
 
 
@@ -13,7 +14,7 @@ function App() {
     <div className="App">
       
       <Routes>
-          {/* <Route path='/*' element={<NotFound/>}/> */}
+          <Route path='/loader' element={<Loader/>}/>
           <Route path='/' element={<MemeGenerator/>}/>    
       </Routes>
     </div>

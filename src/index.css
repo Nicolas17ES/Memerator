@@ -51,5 +51,30 @@ body {
 /* END UPLOAD BLCOK DESIGN */
 
 
+/* START UPLOADED BLCOK DESIGN */
+.uploaded{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.memeImage{
+  width: 700px;
+  max-height: 500px;
+}
+
+/* END UPLOADED BLCOK DESIGN */
+
+/* START GENERATED BLCOK DESIGN */
+.meme{
+  position: relative;
+  width: 59%;
+  margin: auto;
+}
+
+/* END GENERATED BLCOK DESIGN */
+
+
 
 
