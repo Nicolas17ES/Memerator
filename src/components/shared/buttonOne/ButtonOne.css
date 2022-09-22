@@ -9,20 +9,14 @@
     font-family: 'Bebas Neue', sans-serif;
     font-size: 29px;
     letter-spacing: 2px;
-    color: black;
+    color: rgba(0, 0, 0, .67);
     font-weight: 100;
-    /* box-shadow: rgba(48, 226, 87, 0.4) 5px 5px, rgba(48, 226, 87, 0.3) 10px 10px, rgba(48, 226, 87, 0.2) 15px 15px, rgba(48, 226, 87, 0.1) 20px 20px; */
     box-shadow: 4px 4px rgba(41, 110, 56, .9);
     transition: all .4s;
-    animation: slideDown 2s ease 1 forwards;
-    transform: translateY(-350px);
-    opacity: 0;
-    visibility: hidden;
 }
 
 .buttonOne:hover {
   transform: scale(1.1);
-  opacity: 0.85;
 }
 
 

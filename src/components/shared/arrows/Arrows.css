@@ -8,15 +8,15 @@
   position: relative;
   margin: 0 auto;
   width: 60px;
-   transform: rotate(-54deg);
-  -webkit-transform: rotate(-54deg);
-  -moz-transform: rotate(-54deg);
-  -ms-transform: rotate(-54deg);
+   transform: rotate(-58deg);
+  -webkit-transform: rotate(-58deg);
+  -moz-transform: rotate(-58deg);
+  -ms-transform: rotate(-58deg);
 }
 
 .arrow .curve {
-  border: 9px solid #be5f4b;
-  border-color: transparent transparent transparent #be5f4b;
+  border: 29px solid #43DD65;
+  border-color: transparent transparent transparent #43DD65;
   height: 300px;
   width: 1200px;
   border-radius: 230px 0 0 150px;
@@ -30,15 +30,15 @@
 
 .arrow .point:before,
 .arrow .point:after {
-  border: 4px solid #be5f4b;
-  height: 25px;
+  border: 14px solid #43DD65;
+  height: 45px;
   content: "";
   position: absolute;
 }
 
 .arrow .point:before {
-  top: -11px;
-  left: -11px;
+  top: -24px;
+  left: -17px;
   transform: rotate(-74deg);
   -webkit-transform: rotate(-74deg);
   -moz-transform: rotate(-74deg);
@@ -46,10 +46,10 @@
 }
 
 .arrow .point:after {
-  top: -20px;
-  left: 5px;
-  transform: rotate(12deg);
-  -webkit-transform: rotate(12deg);
-  -moz-transform: rotate(12deg);
-  -ms-transform: rotate(12deg);
+  top: -45px;
+  left: 12px;
+  transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
 }

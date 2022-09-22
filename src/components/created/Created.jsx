@@ -1,5 +1,6 @@
 import {useContext} from 'react';
 import MemeratorContext from '../../context/MemeratorContext'
+import {GiFinishLine} from 'react-icons/gi'
 
 function Created() {
 
@@ -30,8 +31,9 @@ function Created() {
 
     return (
         <div className="generated">
-            <h1>Meme Succesfully generated</h1>
-            <button onClick={restart}>Keep doing memes</button>
+            <h2 className="generated-title">THANK YOU</h2>
+            {/* <GiFinishLine className="finish-line"/> */}
+            <button className="keep-meming-button" onClick={restart}>Keep meming</button>
         </div>
     )
 }

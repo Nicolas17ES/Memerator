@@ -1,4 +1,4 @@
-import {useState, useEffect, useContext} from 'react';
+import {useState, useEffect, useContext, useRef} from 'react';
 import MemeratorContext from '../../context/MemeratorContext'
 
 function InputText() {
@@ -6,6 +6,7 @@ function InputText() {
    const [text, setText] = useState('');
     const [message, setMessage] = useState('');
     const [isDisabled, setBtnDisabled] = useState(true);
+    const shake = useRef(null);
 
     const {dispatch} = useContext(MemeratorContext);
 
@@ -13,18 +14,28 @@ function InputText() {
         if(text === ''){
             setBtnDisabled(true)
             setMessage(null)
-        } else if (text !== '' && text.trim().length < 4){
+            const button = shake.current; 
+            button.className = "button-uploaded";   
+        } else if (text !== '' && text.trim().length < 5){
             setBtnDisabled(true)
             setMessage('Insert at least 5 charachters')
-        } else if (text !== '' && text.trim().length >= 66){
+            const button = shake.current; 
+            button.className = "button-uploaded";
+        } else if (text !== '' && text.trim().length >= 56){
             setBtnDisabled(true)
-            setMessage('Insert a max of 65 charachters')
-        } else if (text !== '' && text.trim().length <= 65) {
+            setMessage('Insert a max of 55 charachters')
+            const button = shake.current; 
+            button.className = "button-uploaded";
+        } else if (text !== '' && text.trim().length <= 55 && text.trim().length > 6) {
             setBtnDisabled(false)
             setMessage(null)
+            const button = shake.current; 
+            button.className = "shakeit2";
         } else  {
             setBtnDisabled(false)
             setMessage(null)
+            const button = shake.current; 
+            button.className = "shakeit2";
         }
          setText(e.target.value)
     }
@@ -41,8 +52,8 @@ function InputText() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="add your text" name="text" maxLength="67" onChange={handleTextChange}/>
-                <button type="submit" className="btn" disabled={isDisabled}>SUBMIT</button>
+                <input className="input-uploaded top" type="text" placeholder="Place text here..." name="text" maxLength="57" onChange={handleTextChange}/>
+                <button ref={shake} className="button-uploaded top" type="submit" disabled={isDisabled}>ADD TEXT</button>
                 {message && <div className="message">{message}</div>}
             </form>
 

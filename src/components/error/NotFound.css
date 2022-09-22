@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Mono:400");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 
 .error-container {
   display: flex;
@@ -9,28 +11,53 @@
   margin: auto;
   margin-top: 100px;
   color: black;
-  font-size: 96px;
-  letter-spacing: -7px;
+  font-size: 92px;
+  letter-spacing: 1px;
+  
 }
 
 .text-error {
-  font-size: 25px;
-  letter-spacing: 1px;
-  width: 80%;
+  font-size: 23.8px;
+  letter-spacing: 0px;
+  width: 70%;
   text-align: center;
   margin-top: 80px;
-}
-.button-home {
-  font-size: 48px;
-  border: 3px solid wheat;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 50px;
+  line-height: 40px;
+  font-family: 'Press Start 2P', cursive;
 }
 
 .error {
   margin-top: 40px;
   animation: glitch 1s linear infinite;
+  letter-spacing: 10px;
+}
+
+.button-error{
+  width: 170px;
+  height: 45px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2.5px solid black;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.9);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 27px;
+  letter-spacing: 2px;
+  transition: all .4s;
+  cursor: pointer;
+}
+.button-error:hover{
+  transform: scale(1.077);
+  background-color: rgb(43, 43, 43);
+  color: #FFDCA8;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+.error-icon{
+  width: 140px;
+  height: 140px;
+  margin-bottom: -90px;
+  color: #FF2C62;
+  animation: slideDown 1.2s ease 1 forwards;
 }
 
 @keyframes glitch {

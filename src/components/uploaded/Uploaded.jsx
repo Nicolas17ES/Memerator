@@ -7,6 +7,8 @@ import Loader from '../shared/loader/Loader'
 import {useContext, useEffect, useState, useRef} from 'react';
 import MemeratorContext from '../../context/MemeratorContext'
 import * as htmlToImage from 'html-to-image';
+import {BsFillCloudDownloadFill} from 'react-icons/bs'
+import {MdOutlinePreview} from 'react-icons/md'
 
 
 
@@ -24,8 +26,7 @@ function Uploaded() {
                 setTextTwo(true)
             }
         }, [memeText, memeText2]);
-        console.log(memeText)
-        console.log(memeText2)
+
 
         const downloadImage = async () => {
             
@@ -71,6 +72,15 @@ function Uploaded() {
         }
         // RESET TEXTS
 
+
+        // PREVIEW MEME
+        const preview = () => {
+
+            const button = domEl.current; 
+            button.className = "preview";
+        }
+        // PREVIEW MEME
+
         if (isLoading){
             return (
                 <Loader/>
@@ -78,7 +88,7 @@ function Uploaded() {
         } else if(!textOne && !textTwo){
             return (
                 <div className="uploaded"> 
-                    <Input/>          
+                    <Input />          
                     <div className="meme">
                             <Image/>
                     </div>
@@ -88,7 +98,7 @@ function Uploaded() {
         } else if (textOne && !textTwo) {
             return(
                 <div className="uploaded"> 
-                    <button onClick={changeTextOne}>Change Top Text</button>          
+                    <button className="change-text-button" onClick={changeTextOne}>Change Top Text</button>          
                     <div className="meme">
                             <MemeText/>
                             <Image/>
@@ -105,21 +115,22 @@ function Uploaded() {
                             <Image/>
                             <MemeText2/>
                     </div>
-                    <button onClick={changeTextTwo}>Change Bottom Text</button>
+                    <button className="change-text-button"  onClick={changeTextTwo}>Change Bottom Text</button>
                 </div>
             )
             
         } else {
             return(
                 <div className="uploaded"> 
-                    <button onClick={changeTextOne}>Change Top Text</button>          
+                <button className="download-button" onClick={downloadImage}> <BsFillCloudDownloadFill className="download-icon"/> <p>DOWNLOAD</p> </button>
+                    <button className="change-text-button"  onClick={changeTextOne}>Change Top Text</button>          
                     <div className="meme" ref={domEl}>                          
                             <MemeText/>
                             <Image/>
                             <MemeText2/>
                     </div>
-                     <button onClick={changeTextTwo}>Change Bottom Text</button>
-                    <button onClick={downloadImage}>Download Image</button>
+                     <button className="change-text-button"  onClick={changeTextTwo}>Change Bottom Text</button>
+                <button className="download-button-left" onClick={preview}> <MdOutlinePreview className="download-icon-left"/> <p>PREVIEW</p></button>
                 </div>
             )
             

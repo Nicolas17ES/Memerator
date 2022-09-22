@@ -15,6 +15,7 @@ function Start() {
         
     }, [])
 
+
     return (
         <div className="start">
             <Title text={'Memerator'}/>

@@ -1,9 +1,9 @@
-import {useState, useContext} from 'react'
+import { useContext} from 'react'
 import MemeratorContext from '../../context/MemeratorContext'
-import Title from '../shared/title/Title'
 import ArrowLeft from '../shared/arrows/ArrowLeft'
 import Uploader from './ImageUpload'
 import Loader from '../shared/loader/Loader'
+import {FaLongArrowAltDown} from 'react-icons/fa'
 
 
 function Upload() {
@@ -24,11 +24,12 @@ function Upload() {
     ) : (
         <div className="upload">
             <div className="arrow-position">
-                <ArrowLeft/>
+                <FaLongArrowAltDown className="upload-arrow"/>
             </div>
            
             <div className="upload-pic">
-                <Title text={'Upload a picture'} />
+                <h2 className="upload-title">Upload picture</h2>
+                {/* <Title text={'Upload a picture'} /> */}
             </div> 
             <Uploader/>
         </div>

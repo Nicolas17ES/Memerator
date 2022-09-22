@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 * {
   margin: 0;
@@ -9,6 +10,7 @@
 body {
   font-family: 'Bebas Neue', sans-serif;
   background-color: #FFDCA8;
+  overflow-x: hidden;
 }
 
 /* MAIN PAGE STYLE */
@@ -31,7 +33,6 @@ body {
   align-items: center;
   flex-direction: column;
   margin: auto;
-  gap: 170px;
   width: 100%;
   height: 100%;
   position: relative;
@@ -43,6 +44,28 @@ body {
 }
 
 /* intro shapes */
+@keyframes slideDown {
+	0% {
+		transform: translateY(-350px);
+	}
+	43% {
+		opacity: .7;
+        visibility: visible;
+	}
+	65%{
+		transform: translateY(30%);
+	}
+
+	85%{
+		transform: translateY(10%);
+    }
+    			
+	100% {
+        opacity: 1;
+        visibility: visible;
+		transform: translateY(0%);
+	}		
+}
 .start:after{
   content: "";
   position: absolute;
@@ -54,7 +77,7 @@ body {
   background-color: #37CFFF;
   border: 2.5px solid black;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.9);
-  animation: slideDown 2s ease .5s 1 forwards;
+  animation: slideDown 1.3s ease .2s 1 forwards;
     transform: translateY(-350px);
     opacity: 0;
     visibility: hidden;
@@ -69,10 +92,10 @@ body {
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
   border-bottom: 50px solid black;
-  background-color: #FF37D3;
+  background-color: #FF2C62;
   border: 2.5px solid black;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.9);
-  animation: slideDown 2s ease .7s 1 forwards;
+  animation: slideDown 1.3s ease .5s 1 forwards;
   transform: translateY(-350px);
   opacity: 0;
     visibility: hidden;
@@ -106,10 +129,137 @@ body {
 
 
 /* UPLOAD BLCOK DESIGN */
+
+.upload{
+  justify-content: center;
+  gap: 100px;
+}
+
+/* arrow left */
+
 .arrow-position{
   position: absolute;
-  left: 100px;
-  top: 13%;
+  left: 20%;
+  animation: runed 1s linear 3;
+  /* top: 15%; */
+}
+
+.upload-arrow{
+  width: 80px;
+  height: 160px;
+  transform: rotate(-90deg);
+  color: #43DD65;
+  
+
+}
+
+@keyframes runed {
+  0% {
+    left: 20%;
+  }
+  50% { 
+    left: 24.6%; 
+   }
+  100% {
+    left: 20%;     
+  }
+}
+
+/* end arrow left */
+
+.upload-title{
+    margin-top: 0px;
+    font-size: 60px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    letter-spacing: -3px;
+}
+
+.uploader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.file-upload-block{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.upload-input{
+  width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.upload-label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3px;
+  cursor: pointer;
+  font-size: 24px;
+  letter-spacing: 1.7px;
+  transition: .4s;
+}
+.upload-label:hover{
+  transform: scale(1.15);
+}
+
+.upload-icon{
+  width: 130px;
+  height: 130px;
+  color: #37CFFF;
+}
+
+
+.upload-button{
+   width: 160px;
+    height: 60px;
+    margin-top: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FF2C62;
+    border: 2.5px solid #9b1f3e;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 29px;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, .67);
+    font-weight: bold;
+    box-shadow: 4px 4px rgba(155, 31, 62, .9);
+}
+
+.shakeit{
+   width: 160px;
+    height: 60px;
+    margin-top: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #43DD65;
+    border: 2.5px solid #296e38;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 29px;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, .67);
+    font-weight: bold;
+    box-shadow: 4px 4px rgba(41, 110, 56, .9);
+  animation: shaking .5s infinite linear;
+}
+
+
+@keyframes shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-2deg); }
+  100% { transform: rotate(0deg); }
 }
 
 /* END UPLOAD BLCOK DESIGN */
@@ -117,7 +267,7 @@ body {
 
 /* START UPLOADED BLCOK DESIGN */
 .uploaded{
-  width: 40%;
+  width: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,38 +275,217 @@ body {
   /* border: 2px solid red; */
 }
 
-.btn:hover {
-  transform: scale(0.98);
-  opacity: 0.9;
+/* buttons to set meme text */
+
+.input-uploaded{
+    width: 210px;
+    height: 38px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2.5px solid black;
+    background-color: transparent;
+    box-shadow: 2px 2px rgba(0, 0, 0, .8);
+    font-size: 19px;
+    font-family: 'Bebas Neue', sans-serif;
+    animation: fadein 1s;
+}
+.input-uploaded:focus{
+    border: 2.5px solid rgb(51, 202, 248);
+    box-shadow: 2px 2px rgb(55, 207, 255, .9);
+    outline: none;
+ 
+
+}
+.input-uploaded:active{
+    border: 2.5px solid rgb(51, 202, 248);
+    box-shadow: 2px 2px rgb(55, 207, 255, .9);
+    outline: none;
 }
 
-.btn:disabled {
-  background-color: #cccccc;
-  color: #333;
-  cursor: auto;
+.button-uploaded{
+  margin-left: 20px;
+   width: 110px;
+    height: 38px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #FF2C62;
+    border: 2.5px solid #9b1f3e;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 19px;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, .67);
+    font-weight: bold;
+    box-shadow: 2px 2px rgba(155, 31, 62, .9);
+    animation: fadein 1s;
 }
 
-.btn:disabled:hover {
-  transform: scale(1);
-  opacity: 1;
+.shakeit2{
+   margin-left: 20px;
+   width: 110px;
+    height: 38px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #43DD65;
+    border: 2.5px solid #296e38;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 19px;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, .67);
+    font-weight: bold;
+    box-shadow: 2px 2px rgba(41, 110, 56, .9);
+  animation: shaking .5s infinite linear;
 }
+
+.top{
+  margin-bottom: 35px;
+}
+.bottom{
+  margin-top: 34px;
+}
+
+/* buttons to set meme text */
+
+
+/* missage dsiplayed on input fields */
 .message {
-  padding-top: 7px;
-  font-size: 12px;
+  margin-top: -15px;
+  padding-bottom: 15px;
+  font-size: 18px;
   text-align: center;
   color: rebeccapurple;
+  animation: fadein .8s;
 }
+.message2 {
+  padding-top: 15px;
+  margin-bottom: -15px;
+  font-size: 18px;
+  text-align: center;
+  color: rebeccapurple;
+  animation: fadein .8s;
+}
+
+/* GENERATED MEME */
 .meme{
   position: relative;
   width: 100%;
   margin: 0;
-  /* border: 2px solid green; */
+  animation: fadein 1s;
 }
+
 
 .memeImage{
   width: 100%;
-  max-height: 500px;
-  /* border: 2px solid black; */
+  max-height: 400px;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* CHANGE TEXT BUTTONS */
+.change-text-button{
+  margin: 35px 0;
+   width: 210px;
+    height: 38px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    background-color: rgb(43, 43, 43);
+    color: #FFDCA8;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: #FFDCA8;
+    border: 2px solid black;
+    font-weight: bold;
+    /* transition: all .4s; */
+    animation: fadein 1.6s;
+    transition: all .4s;
+}
+
+.change-text-button:hover{
+  transform: scale(1.077);
+}
+/* .change-text-button:hover{
+
+  transform: scale(1.077);
+} */
+
+/* download button */
+
+.download-button{
+  position: absolute;
+  left: 13%;
+  top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: 'Bebas Neue', sans-serif;
+  transition: all .4s;
+  cursor: pointer;
+  animation: slideDown 2s ease 1 forwards;
+}
+.download-icon{
+  
+  width: 90px;
+  height:90px;
+  color: #43DD65;
+  transition: all .4s;
+  
+  
+}
+.download-icon:hover{
+  color: #296e38;
+  transform: scale(1.077);
+}
+.download-button:hover{
+  transform: scale(1.077);
+}
+
+/* Preview button */
+.download-button-left{
+  position: absolute;
+  right: 13%;
+  top: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 14px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-family: 'Bebas Neue', sans-serif;
+  
+  cursor: pointer;
+  animation: slideDown 2s ease 1 forwards;
+}
+.download-icon-left{
+  
+  width: 90px;
+  height:90px;
+  color: #37CFFF;
+  transition: all .4s;
+}
+.download-icon-left:hover{
+  color: #1ea5ce;
+  transform: scale(1.077);
+}
+.download-button-left:hover{
+  transform: scale(1.077);
+}
+
+.preview{
+  transform: scale(1.4);
 }
 
 /* END UPLOADED BLCOK DESIGN */
@@ -169,7 +498,82 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 100px;
+  gap: 200px;
+}
+
+.generated:after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 50px;
+  background-color: #37CFFF;
+  z-index: -10;
+  transform: rotate(15deg);
+  border: 2px solid black;
+
+}
+.generated:before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 50px;
+  background-color: #9b1f3e;
+  z-index: -10;
+  transform: rotate(-15deg);
+  border: 2px solid black;
+
+}
+/* .generated:before{
+  content: "";
+  position: absolute;
+  width: 90px; 
+  height:90px;
+  right: 200px;
+  top: 30%;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid black;
+  background-color: #FF2C62;
+  border: 2.5px solid black;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.9);
+  z-index: -10;
+} */
+
+
+.generated-title{
+  font-size: 50px;
+  letter-spacing: 2px;
+  margin-top: 0px;
+  font-size: 50px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.finish-line{
+  width: 130px;
+  height: 130px;
+}
+
+.keep-meming-button{
+   width: 160px;
+    height: 60px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 170px;
+    background-color: #43DD65;
+    border: 2.5px solid #296e38;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: rgba(0, 0, 0, .67);
+    font-weight: 100;
+    box-shadow: 4px 4px rgba(41, 110, 56, .9);
+    transition: all .4s;
+}
+.keep-meming-button:hover{
+   transform: scale(1.077);
+   
 }
 /* END GENERATED BLOCK */
 

@@ -34,7 +34,7 @@ function NavBar() {
         <header>
             <nav>
                 <ul className="nav-links">
-                    <li className="link"> <Link to="/"><GiCardJoker className="nav-icon"/></Link></li>
+                    <li className="link"> <GiCardJoker className="nav-icon"/></li>
                     <li className="link link-margin" onClick={restart}> Restart</li>
                 </ul>
             </nav>
