@@ -1,11 +1,13 @@
 .meme-text {
-   position: absolute;
-  width: 80%;
+  position: absolute;
+  padding: 0 14px;
+  width: 100%;
   text-align: center;
   font-family: impact;
-  font-size: 2.8em;
+  font-size: 1.94em;
   text-transform: uppercase;
   color: white;
+  overflow-wrap: break-word;
   letter-spacing: 1px;
   text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
     -2px 2px 0 #000, 0px 2px 0 #000, 2px 0px 0 #000, 0px -2px 0 #000,
@@ -16,5 +18,5 @@
   top: 10px;
 }
 .bottom{
-  bottom: 10px;
+  bottom: 14.5px;
 }

@@ -6,6 +6,8 @@ import MemeratorContext from '../context/MemeratorContext'
 import Start from '../components/start/Start'
 import Upload from '../components/upload/Upload'
 import Uploaded from '../components/uploaded/Uploaded'
+import Created from '../components/created/Created'
+import Error from '../components/error/Error'
 
 
 function MemeGenerator() {
@@ -36,17 +38,31 @@ function MemeGenerator() {
         </div>
         )
     }
-    else if (status === 'generated') {
+    // else if (status === 'generated') {
+    //     return (
+    //     <div className="memerator">
+    //         <h1>GENERATED</h1>
+    //     </div>
+    //     )
+    // }
+    else if (status === 'error_uploading') {
         return (
         <div className="memerator">
-            <h1>GENERATED</h1>
+            <Error/>
+        </div>
+        )
+    }
+    else if (status === 'meme_created') {
+        return (
+        <div className="memerator">
+            <Created/>
         </div>
         )
     }
     else {
         return (
         <div className="memerator">
-            <h1>Memerator else</h1>
+            <Start/>
         </div>
     )
     }

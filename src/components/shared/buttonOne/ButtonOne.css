@@ -1,6 +1,50 @@
 .buttonOne{
-    width: 100px;
+    width: 160px;
     height: 60px;
-    border-radius: 10px;
+    margin-top: 100px;
+    border-radius: 5px;
     cursor: pointer;
+    background-color: #43DD65;
+    border: 2.5px solid #296e38;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 29px;
+    letter-spacing: 2px;
+    color: black;
+    font-weight: 100;
+    /* box-shadow: rgba(48, 226, 87, 0.4) 5px 5px, rgba(48, 226, 87, 0.3) 10px 10px, rgba(48, 226, 87, 0.2) 15px 15px, rgba(48, 226, 87, 0.1) 20px 20px; */
+    box-shadow: 4px 4px rgba(41, 110, 56, .9);
+    transition: all .4s;
+    animation: slideDown 2s ease 1 forwards;
+    transform: translateY(-350px);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.buttonOne:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+
+@keyframes slideDown {
+	0% {
+		transform: translateY(-350px);
+	}
+	43% {
+		opacity: .7;
+        visibility: visible;
+	}
+	65%{
+		transform: translateY(30%);
+	}
+
+	85%{
+		transform: translateY(10%);
+    }
+    			
+	100% {
+        opacity: 1;
+        visibility: visible;
+		transform: translateY(0%);
+	}		
 }

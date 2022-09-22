@@ -10,11 +10,11 @@ function Upload() {
 
     const {isLoading, dispatch} = useContext(MemeratorContext);
 
-    const [fileUploader, setFileUploader] = useState(false);
+    // const [fileUploader, setFileUploader] = useState(false);
     
-    const showFileUploader = () => {
-        setFileUploader(true);
-    }
+    // const showFileUploader = () => {
+    //     setFileUploader(true);
+    // }
 
     return isLoading ? (
         <div className="upload">
@@ -26,14 +26,11 @@ function Upload() {
             <div className="arrow-position">
                 <ArrowLeft/>
             </div>
-            {!fileUploader ? 
-                <div onClick={showFileUploader} className="upload-pic">
-                    <Title text={'Upload a picture'} />
-                </div> 
-                : 
-                <Uploader/> 
-            }
-            
+           
+            <div className="upload-pic">
+                <Title text={'Upload a picture'} />
+            </div> 
+            <Uploader/>
         </div>
     )
 }

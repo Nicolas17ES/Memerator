@@ -7,14 +7,20 @@ import {getFile } from '../../context/MemeratorActions'
 function Image() {
 
     const [meme, setMeme] = useState();
-    const {imageName, imagePath} = useContext(MemeratorContext);
+    const {imageName, imagePath, dispatch} = useContext(MemeratorContext);
 
     useEffect(() => {
         
         async function fetchData() {
             const response = await getFile(imageName);
-            setMeme(response.data) 
-        
+            if(response.status === 200){
+                setMeme(response.data)
+            } else {
+                dispatch({
+                        type: 'SET_STATUS',
+                        payload: 'error_uploading'
+                    })
+            } 
         }
 
     fetchData();
@@ -25,9 +31,9 @@ function Image() {
 
 
     return (
-        <div>
+        <>
             <img src={imagePath} alt="User meme" className="memeImage"/>
-        </div>
+        </>
     )
 }
 

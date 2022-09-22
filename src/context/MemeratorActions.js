@@ -15,10 +15,24 @@ import axios from 'axios';
             }  
     }
 
+// get image from server
+
  export const getFile = async (originalname) => {
             
             try{
                const res = await axios.get(`http://localhost:8000/upload/${originalname}`);
+                return res;
+
+            } catch(error){
+                return error;
+            }  
+    }
+
+// delete images from server and db
+ export const deleteFiles = async () => {
+
+            try{
+               const res = await axios.delete("http://localhost:8000/upload/delete");
                 return res;
 
             } catch(error){

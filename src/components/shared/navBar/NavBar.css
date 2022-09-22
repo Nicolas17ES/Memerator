@@ -6,7 +6,6 @@ header{
     padding: .3rem 2rem;
     color: #171830;
     position: sticky;
-    border-bottom: 3px solid #171830;
     padding-bottom: 20px;
     top: 0;
     z-index: 1000;
@@ -39,7 +38,9 @@ nav{
     text-decoration: none;
     padding: 10px 30px;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
     -webkit-transition: all 700ms ease;
     -moz-transition: all 700ms ease;
     -ms-transition: all 700ms ease;
@@ -53,4 +54,5 @@ nav{
 
 .link-margin{
     margin-top: 7px;
+    cursor: pointer;
 }
