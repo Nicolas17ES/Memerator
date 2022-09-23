@@ -122,7 +122,7 @@ function Uploaded() {
         } else {
             return(
                 <div className="uploaded"> 
-                <button className="download-button" onClick={downloadImage}> <BsFillCloudDownloadFill className="download-icon"/> <p>DOWNLOAD</p> </button>
+                <button className="download-button" onClick={downloadImage}> <BsFillCloudDownloadFill className="download-icon"/> <p className="download-text">DOWNLOAD</p> </button>
                     <button className="change-text-button"  onClick={changeTextOne}>Change Top Text</button>          
                     <div className="meme" ref={domEl}>                          
                             <MemeText/>
@@ -130,7 +130,7 @@ function Uploaded() {
                             <MemeText2/>
                     </div>
                      <button className="change-text-button"  onClick={changeTextTwo}>Change Bottom Text</button>
-                <button className="download-button-left" onClick={preview}> <MdOutlinePreview className="download-icon-left"/> <p>PREVIEW</p></button>
+                <button className="download-button-left" onClick={preview}> <MdOutlinePreview className="download-icon-left"/> <p className="preview-text">PREVIEW</p></button>
                 </div>
             )
             

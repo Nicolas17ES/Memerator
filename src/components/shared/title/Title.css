@@ -8,10 +8,25 @@
 }
 .title-main{
     color: black;
-    
     margin-left: 16px;
-    /* text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
-             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff; */
-    /* text-shadow: 2.4px 2.4px rgba(0, 0, 0, 0.6); */
+}
 
+@media (max-width: 970px) {
+  .title{
+    font-size: 30px;
+    }
+}
+@media (max-width: 600px) {
+  .title{
+    font-size: 24px;
+    letter-spacing: -2px;
+    }
+}
+
+@media(max-width: 460px){
+  .title{
+    margin-top: 30px;
+    font-size: 17px;
+    letter-spacing: -3px;
+    }
 }

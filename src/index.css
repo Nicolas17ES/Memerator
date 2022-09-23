@@ -8,8 +8,8 @@
 }
 
 body {
-  font-family: 'Bebas Neue', sans-serif;
-  background-color: #FFDCA8;
+  font-family: "Bebas Neue", sans-serif;
+  background-color: #ffdca8;
   overflow-x: hidden;
 }
 
@@ -23,11 +23,11 @@ body {
   height: 85vh;
   margin: auto;
   margin-top: 85px;
-  
 }
 
 /* START BLCOK DESIGN */
-.start, .upload{
+.start,
+.upload {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,82 +36,68 @@ body {
   width: 100%;
   height: 100%;
   position: relative;
-
 }
 
-.start{
+.start {
   gap: 80px;
 }
 
 /* intro shapes */
 @keyframes slideDown {
-	0% {
-		transform: translateY(-350px);
-	}
-	43% {
-		opacity: .7;
-        visibility: visible;
-	}
-	65%{
-		transform: translateY(30%);
-	}
+  0% {
+    transform: translateY(-350px);
+  }
+  43% {
+    opacity: 0.7;
+    visibility: visible;
+  }
+  65% {
+    transform: translateY(30%);
+  }
 
-	85%{
-		transform: translateY(10%);
-    }
-    			
-	100% {
-        opacity: 1;
-        visibility: visible;
-		transform: translateY(0%);
-	}		
+  85% {
+    transform: translateY(10%);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+  }
 }
-.start:after{
+.start:after {
   content: "";
   position: absolute;
-  left: 130px;
+  left: 170px;
   top: 55%;
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #37CFFF;
+  background-color: #37cfff;
   border: 2.5px solid black;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.9);
-  animation: slideDown 1.3s ease .2s 1 forwards;
-    transform: translateY(-350px);
-    opacity: 0;
-    visibility: hidden;
-}
-.start:before{
-  content: "";
-  position: absolute;
-  width: 90px; 
-  height:90px;
-  right: 130px;
-  top: 35%;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 50px solid black;
-  background-color: #FF2C62;
-  border: 2.5px solid black;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.9);
-  animation: slideDown 1.3s ease .5s 1 forwards;
+  animation: slideDown 1.3s ease 0.2s 1 forwards;
   transform: translateY(-350px);
   opacity: 0;
-    visibility: hidden;
+  visibility: hidden;
 }
-
-/* thunderbolt */
-.thunderbolt{
+.start:before {
+  content: "";
   position: absolute;
-  top: 38%;
-  width: 200px;
-  height: 200px;
-  color: yellow;
-  z-index: -10;
+  width: 90px;
+  height: 90px;
+  right: 170px;
+  top: 41%;
+  background-color: #ff2c62;
+  border: 2.5px solid black;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.9);
+  animation: slideDown 1.3s ease 0.5s 1 forwards;
+  transform: translateY(-350px);
+  opacity: 0;
+  visibility: hidden;
 }
 
-.sub-title{
+.sub-title {
   font-size: 24px;
   letter-spacing: 4px;
 }
@@ -123,66 +109,61 @@ body {
   color: rebeccapurple;
 }
 
-
-
 /* END START BLCOK DESIGN */
-
 
 /* UPLOAD BLCOK DESIGN */
 
-.upload{
+.upload {
   justify-content: center;
-  gap: 100px;
+  gap: 120px;
 }
 
 /* arrow left */
 
-.arrow-position{
+.arrow-position {
   position: absolute;
   left: 20%;
   animation: runed 1s linear 3;
   /* top: 15%; */
 }
 
-.upload-arrow{
+.upload-arrow {
   width: 80px;
   height: 160px;
   transform: rotate(-90deg);
-  color: #43DD65;
-  
-
+  color: #43dd65;
 }
 
 @keyframes runed {
   0% {
     left: 20%;
   }
-  50% { 
-    left: 24.6%; 
-   }
+  50% {
+    left: 24.6%;
+  }
   100% {
-    left: 20%;     
+    left: 20%;
   }
 }
 
 /* end arrow left */
 
-.upload-title{
-    margin-top: 0px;
-    font-size: 60px;
-    font-family: 'Press Start 2P', cursive;
-    text-align: center;
-    letter-spacing: -3px;
+.upload-title {
+  margin-top: 0px;
+  font-size: 60px;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  letter-spacing: -3px;
 }
 
-.uploader{
+.uploader {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.file-upload-block{
+.file-upload-block {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,15 +171,15 @@ body {
   cursor: pointer;
 }
 
-.upload-input{
+.upload-input {
   width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
-.upload-label{
+.upload-label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,67 +188,74 @@ body {
   cursor: pointer;
   font-size: 24px;
   letter-spacing: 1.7px;
-  transition: .4s;
+  transition: 0.4s;
 }
-.upload-label:hover{
+.upload-label:hover {
   transform: scale(1.15);
 }
 
-.upload-icon{
+.upload-icon {
   width: 130px;
   height: 130px;
-  color: #37CFFF;
+  color: #37cfff;
 }
 
-
-.upload-button{
-   width: 160px;
-    height: 60px;
-    margin-top: 100px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #FF2C62;
-    border: 2.5px solid #9b1f3e;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 29px;
-    letter-spacing: 2px;
-    color: rgba(0, 0, 0, .67);
-    font-weight: bold;
-    box-shadow: 4px 4px rgba(155, 31, 62, .9);
+.upload-button {
+  width: 160px;
+  height: 60px;
+  margin-top: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff2c62;
+  border: 2.5px solid #9b1f3e;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 29px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.67);
+  font-weight: bold;
+  box-shadow: 4px 4px rgba(155, 31, 62, 0.9);
 }
 
-.shakeit{
-   width: 160px;
-    height: 60px;
-    margin-top: 100px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #43DD65;
-    border: 2.5px solid #296e38;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 29px;
-    letter-spacing: 2px;
-    color: rgba(0, 0, 0, .67);
-    font-weight: bold;
-    box-shadow: 4px 4px rgba(41, 110, 56, .9);
-  animation: shaking .5s infinite linear;
+.shakeit {
+  width: 160px;
+  height: 60px;
+  margin-top: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #43dd65;
+  border: 2.5px solid #296e38;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 29px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.67);
+  font-weight: bold;
+  box-shadow: 4px 4px rgba(41, 110, 56, 0.9);
+  animation: shaking 0.5s infinite linear;
 }
-
 
 @keyframes shaking {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(2deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform: rotate(-2deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* END UPLOAD BLCOK DESIGN */
 
-
 /* START UPLOADED BLCOK DESIGN */
-.uploaded{
-  width: 35%;
+.uploaded {
+  width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -277,74 +265,71 @@ body {
 
 /* buttons to set meme text */
 
-.input-uploaded{
-    width: 210px;
-    height: 38px;
-    padding: 5px;
-    border-radius: 5px;
-    border: 2.5px solid black;
-    background-color: transparent;
-    box-shadow: 2px 2px rgba(0, 0, 0, .8);
-    font-size: 19px;
-    font-family: 'Bebas Neue', sans-serif;
-    animation: fadein 1s;
+.input-uploaded {
+  width: 210px;
+  height: 38px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 2.5px solid black;
+  background-color: transparent;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+  font-size: 19px;
+  font-family: "Bebas Neue", sans-serif;
+  animation: fadein 1s;
 }
-.input-uploaded:focus{
-    border: 2.5px solid rgb(51, 202, 248);
-    box-shadow: 2px 2px rgb(55, 207, 255, .9);
-    outline: none;
- 
-
+.input-uploaded:focus {
+  border: 2.5px solid rgb(51, 202, 248);
+  box-shadow: 2px 2px rgb(55, 207, 255, 0.9);
+  outline: none;
 }
-.input-uploaded:active{
-    border: 2.5px solid rgb(51, 202, 248);
-    box-shadow: 2px 2px rgb(55, 207, 255, .9);
-    outline: none;
+.input-uploaded:active {
+  border: 2.5px solid rgb(51, 202, 248);
+  box-shadow: 2px 2px rgb(55, 207, 255, 0.9);
+  outline: none;
 }
 
-.button-uploaded{
+.button-uploaded {
   margin-left: 20px;
-   width: 110px;
-    height: 38px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #FF2C62;
-    border: 2.5px solid #9b1f3e;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 19px;
-    letter-spacing: 2px;
-    color: rgba(0, 0, 0, .67);
-    font-weight: bold;
-    box-shadow: 2px 2px rgba(155, 31, 62, .9);
-    animation: fadein 1s;
+  width: 110px;
+  height: 38px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #ff2c62;
+  border: 2.5px solid #9b1f3e;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 19px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.67);
+  font-weight: bold;
+  box-shadow: 2px 2px rgba(155, 31, 62, 0.9);
+  animation: fadein 1s;
 }
 
-.shakeit2{
-   margin-left: 20px;
-   width: 110px;
-    height: 38px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: #43DD65;
-    border: 2.5px solid #296e38;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 19px;
-    letter-spacing: 2px;
-    color: rgba(0, 0, 0, .67);
-    font-weight: bold;
-    box-shadow: 2px 2px rgba(41, 110, 56, .9);
-  animation: shaking .5s infinite linear;
+.shakeit2 {
+  margin-left: 20px;
+  width: 110px;
+  height: 38px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #43dd65;
+  border: 2.5px solid #296e38;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 19px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.67);
+  font-weight: bold;
+  box-shadow: 2px 2px rgba(41, 110, 56, 0.9);
+  animation: shaking 0.5s infinite linear;
 }
 
-.top{
+.top {
   margin-bottom: 35px;
 }
-.bottom{
+.bottom {
   margin-top: 34px;
 }
 
 /* buttons to set meme text */
-
 
 /* missage dsiplayed on input fields */
 .message {
@@ -353,7 +338,7 @@ body {
   font-size: 18px;
   text-align: center;
   color: rebeccapurple;
-  animation: fadein .8s;
+  animation: fadein 0.8s;
 }
 .message2 {
   padding-top: 15px;
@@ -361,51 +346,54 @@ body {
   font-size: 18px;
   text-align: center;
   color: rebeccapurple;
-  animation: fadein .8s;
+  animation: fadein 0.8s;
 }
 
 /* GENERATED MEME */
-.meme{
+.meme {
   position: relative;
   width: 100%;
   margin: 0;
   animation: fadein 1s;
 }
 
-
-.memeImage{
+.memeImage {
   width: 100%;
   max-height: 400px;
 }
 
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* CHANGE TEXT BUTTONS */
-.change-text-button{
+.change-text-button {
   margin: 35px 0;
-   width: 210px;
-    height: 38px;
-    border-radius: 5px;
-    cursor: pointer;
-    background-color: transparent;
-    background-color: rgb(43, 43, 43);
-    color: #FFDCA8;
-    box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 22px;
-    letter-spacing: 2px;
-    color: #FFDCA8;
-    border: 2px solid black;
-    font-weight: bold;
-    /* transition: all .4s; */
-    animation: fadein 1.6s;
-    transition: all .4s;
+  width: 210px;
+  height: 38px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  background-color: rgb(43, 43, 43);
+  color: #ffdca8;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.6);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #ffdca8;
+  border: 2px solid black;
+  font-weight: bold;
+  /* transition: all .4s; */
+  animation: fadein 1.6s;
+  transition: all 0.4s;
 }
 
-.change-text-button:hover{
+.change-text-button:hover {
   transform: scale(1.077);
 }
 /* .change-text-button:hover{
@@ -415,7 +403,7 @@ body {
 
 /* download button */
 
-.download-button{
+.download-button {
   position: absolute;
   left: 13%;
   top: 45%;
@@ -428,30 +416,27 @@ body {
   border: none;
   font-size: 20px;
   letter-spacing: 1px;
-  font-family: 'Bebas Neue', sans-serif;
-  transition: all .4s;
+  font-family: "Bebas Neue", sans-serif;
+  transition: all 0.4s;
   cursor: pointer;
   animation: slideDown 2s ease 1 forwards;
 }
-.download-icon{
-  
+.download-icon {
   width: 90px;
-  height:90px;
-  color: #43DD65;
-  transition: all .4s;
-  
-  
+  height: 90px;
+  color: #43dd65;
+  transition: all 0.4s;
 }
-.download-icon:hover{
+.download-icon:hover {
   color: #296e38;
   transform: scale(1.077);
 }
-.download-button:hover{
+.download-button:hover {
   transform: scale(1.077);
 }
 
 /* Preview button */
-.download-button-left{
+.download-button-left {
   position: absolute;
   right: 13%;
   top: 45%;
@@ -464,27 +449,26 @@ body {
   border: none;
   font-size: 20px;
   letter-spacing: 1px;
-  font-family: 'Bebas Neue', sans-serif;
-  
+  font-family: "Bebas Neue", sans-serif;
+
   cursor: pointer;
   animation: slideDown 2s ease 1 forwards;
 }
-.download-icon-left{
-  
+.download-icon-left {
   width: 90px;
-  height:90px;
-  color: #37CFFF;
-  transition: all .4s;
+  height: 90px;
+  color: #37cfff;
+  transition: all 0.4s;
 }
-.download-icon-left:hover{
+.download-icon-left:hover {
   color: #1ea5ce;
   transform: scale(1.077);
 }
-.download-button-left:hover{
+.download-button-left:hover {
   transform: scale(1.077);
 }
 
-.preview{
+.preview {
   transform: scale(1.4);
 }
 
@@ -492,7 +476,7 @@ body {
 
 /* START GENERATED BLOCK */
 
-.generated{
+.generated {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -501,84 +485,65 @@ body {
   gap: 200px;
 }
 
-.generated:after{
+.generated:after {
   content: "";
   position: absolute;
   top: 50%;
-  width: 30%;
+  width: 50%;
   height: 50px;
-  background-color: #37CFFF;
+  background-color: #37cfff;
   z-index: -10;
   transform: rotate(15deg);
   border: 2px solid black;
-
 }
-.generated:before{
+.generated:before {
   content: "";
   position: absolute;
   top: 50%;
-  width: 30%;
+  width: 50%;
   height: 50px;
   background-color: #9b1f3e;
   z-index: -10;
   transform: rotate(-15deg);
   border: 2px solid black;
-
 }
-/* .generated:before{
-  content: "";
-  position: absolute;
-  width: 90px; 
-  height:90px;
-  right: 200px;
-  top: 30%;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 50px solid black;
-  background-color: #FF2C62;
-  border: 2.5px solid black;
-  box-shadow: 4px 4px rgba(0, 0, 0, 0.9);
-  z-index: -10;
-} */
 
-
-.generated-title{
+.generated-title {
   font-size: 50px;
   letter-spacing: 2px;
   margin-top: 0px;
   font-size: 50px;
-    font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
-.finish-line{
+.finish-line {
   width: 130px;
   height: 130px;
 }
 
-.keep-meming-button{
-   width: 160px;
-    height: 60px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 170px;
-    background-color: #43DD65;
-    border: 2.5px solid #296e38;
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 24px;
-    letter-spacing: 2px;
-    color: rgba(0, 0, 0, .67);
-    font-weight: 100;
-    box-shadow: 4px 4px rgba(41, 110, 56, .9);
-    transition: all .4s;
+.keep-meming-button {
+  width: 160px;
+  height: 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 170px;
+  background-color: #43dd65;
+  border: 2.5px solid #296e38;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: rgba(0, 0, 0, 0.67);
+  font-weight: 100;
+  box-shadow: 4px 4px rgba(41, 110, 56, 0.9);
+  transition: all 0.4s;
 }
-.keep-meming-button:hover{
-   transform: scale(1.077);
-   
+.keep-meming-button:hover {
+  transform: scale(1.077);
 }
 /* END GENERATED BLOCK */
 
 /* START ERROR BLCOK DESIGN */
-.errorPage{
+.errorPage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -588,6 +553,359 @@ body {
 
 /* END ERROR BLCOK DESIGN */
 
+/* MEDIA QUERIES */
 
+@media (max-width: 1100px) {
+  /* UPLOADED */
+  .download-button {
+    left: 6%;
+    gap: 20px;
+  }
+  .download-icon {
+    width: 90px;
+    height: 90px;
+  }
+  .download-button-left {
+    right: 6%;
+    gap: 20px;
+  }
+  .download-icon-left {
+    width: 90px;
+    height: 90px;
+  }
+  /* END UPLOADED */
+}
 
+@media (max-width: 970px) {
+  /* START */
+  .start:after {
+    left: 80px;
+    top: 55%;
+    width: 77px;
+    height: 77px;
+  }
+  .start:before {
+    width: 67px;
+    height: 67px;
+    right: 80px;
+    top: 50%;
+  }
 
+  /* END START */
+
+  /* UPLOAD */
+
+  .upload-title {
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 50px;
+    letter-spacing: -4px;
+    max-width: 90%;
+  }
+
+  .arrow-position {
+    left: 16%;
+    top: 44%;
+  }
+
+  .upload-arrow {
+    height: 110px;
+  }
+
+  .upload-icon {
+    width: 100px;
+    height: 100px;
+    color: #37cfff;
+    margin-bottom: 20px;
+  }
+  /* END UPLOAD */
+
+  /* UPLOADED */
+  .download-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .download-icon-left {
+    width: 70px;
+    height: 70px;
+  }
+  /* END UPLOADED */
+}
+
+@media (max-width: 810px) {
+  /* UPLOADED */
+  .uploaded {
+    width: 440px;
+    /* border: 2px solid red; */
+  }
+
+  .input-uploaded {
+    width: 190px;
+    height: 36px;
+  }
+  .button-uploaded {
+    margin-left: 20px;
+    width: 100px;
+    height: 36px;
+  }
+
+  .top {
+    margin-bottom: 24px;
+  }
+  .bottom {
+    margin-top: 23px;
+  }
+
+  /* UPLOADED */
+  .download-button {
+    left: 14%;
+    bottom: -200px;
+    gap: 0px;
+    font-size: 17px;
+    flex-direction: column-reverse;
+    animation: none;
+  }
+
+  .download-button-left {
+    right: 14%;
+    gap: 0px;
+    bottom: -200px;
+    font-size: 17px;
+    flex-direction: column-reverse;
+    animation: none;
+  }
+  .download-icon {
+    width: 60px;
+    height: 64px;
+  }
+
+  .download-text {
+    display: none;
+  }
+  .preview-text {
+    display: none;
+  }
+
+  /* END UPLOADED */
+}
+
+@media (max-width: 630px) {
+  /* START */
+  .sub-title {
+    font-size: 21px;
+    letter-spacing: 4px;
+  }
+
+  .start:after {
+    left: 90px;
+    top: 55%;
+    width: 64px;
+    height: 64px;
+  }
+  .start:before {
+    width: 57px;
+    height: 57px;
+    right: 90px;
+    top: 50%;
+  }
+
+  /* END START */
+
+  /* UPLOAD */
+
+  .arrow-position {
+    left: 13%;
+    top: 47%;
+    animation: none;
+  }
+
+  .upload-arrow {
+    height: 97px;
+  }
+
+  .upload-button {
+    width: 110px;
+    height: 50px;
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+  /* END UPLOAD */
+
+  /* UPLOADED */
+
+  .uploaded {
+    width: 400px;
+  }
+
+  .top {
+    margin-bottom: 27px;
+  }
+  .bottom {
+    margin-top: 26px;
+  }
+  .download-button {
+    left: 10%;
+    bottom: -180px;
+  }
+
+  .download-button-left {
+    right: 10%;
+    bottom: -180px;
+  }
+  .download-icon {
+    width: 57px;
+    height: 64px;
+  }
+  .download-icon-left {
+    width: 60px;
+    height: 64px;
+  }
+  /* END UPLOADED */
+
+  /* GENERATED */
+  .generated-title {
+    font-size: 40px;
+    letter-spacing: 1px;
+  }
+  /* GENERATED */
+}
+@media (max-width: 500px) {
+  /* UPLOAD */
+  .arrow-position {
+    display: none;
+  }
+  /* END UPLOAD */
+
+  /* UPLOADED */
+
+  .uploaded {
+    width: 350px;
+  }
+  .top {
+    margin-bottom: 37px;
+  }
+  .bottom {
+    margin-top: 36px;
+  }
+
+  .download-button {
+    left: 26%;
+    bottom: -300px;
+  }
+
+  .download-button-left {
+    right: 26%;
+    bottom: -300px;
+  }
+  .download-icon {
+    width: 50px;
+    height: 60px;
+  }
+  .download-icon-left {
+    width: 56px;
+    height: 64px;
+  }
+
+  .download-text {
+    display: block;
+  }
+  .preview-text {
+    display: block;
+  }
+  /* END UPLOADED */
+}
+
+@media (max-width: 460px) {
+  .memerator {
+  height: 80vh
+
+}
+  /* START */
+  .sub-title {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+  .start:after {
+    left: 60px;
+    top: 55%;
+    width: 54px;
+    height: 54px;
+  }
+  .start:before {
+    width: 47px;
+    height: 47px;
+    right: 60px;
+    top: 50%;
+  }
+
+  /* END START */
+
+  /* UPLOAD */
+  .upload {
+    gap: 80px;
+  }
+
+  .upload-title {
+    font-size: 38px;
+  }
+  .memeImage {
+  width: 100%;
+  max-height: 310px;
+}
+
+  .upload-icon {
+    width: 80px;
+    height: 80px;
+
+  }
+  /* END UPLOAD */
+
+  /* UPLOADED */
+  .uploaded {
+    width: 280px;
+  }
+  .input-uploaded {
+    width: 130px;
+    height: 30px;
+    font-size: 15px;
+  }
+  .button-uploaded {
+    margin-left: 10px;
+    width: 80px;
+    height: 32px;
+    font-size: 15px;
+  }
+  .shakeit2 {
+     margin-left: 10px;
+    width: 80px;
+    height: 32px;
+    font-size: 15px;
+  }
+  .change-text-button {
+    width: 150px;
+    height: 30px;
+    font-size: 17px;
+    letter-spacing: 1px;
+    animation: fadein 1.6s;
+    transition: all 0.4s;
+  }
+
+  .download-button {
+    left: 26%;
+    bottom: -320px;
+  }
+
+  .download-button-left {
+    right: 26%;
+    bottom: -320px;
+  }
+  /* END UPLOADED */
+
+  .generated-title {
+    margin-bottom: -60px;
+    font-size: 28px;
+    letter-spacing: 1px;
+  }
+}
