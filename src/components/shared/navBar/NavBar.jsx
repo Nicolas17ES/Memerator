@@ -28,6 +28,10 @@ function NavBar() {
                 type: 'SET_IMAGENAME',
                 payload: '',
             })
+        dispatch({
+                type: 'SET_LOADING',
+                payload: false,
+            })
     }
 
     return (

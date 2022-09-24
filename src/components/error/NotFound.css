@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Mono:400");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
-
 .error-container {
   display: flex;
   width: fit-content;
@@ -13,7 +12,6 @@
   color: black;
   font-size: 92px;
   letter-spacing: 1px;
-  
 }
 
 .text-error {
@@ -23,7 +21,7 @@
   text-align: center;
   margin-top: 80px;
   line-height: 40px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 .error {
@@ -32,31 +30,31 @@
   letter-spacing: 10px;
 }
 
-.button-error{
+.button-error {
   width: 170px;
   height: 45px;
   background-color: transparent;
   border-radius: 5px;
   border: 2.5px solid black;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.9);
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 27px;
   letter-spacing: 2px;
-  transition: all .4s;
+  transition: all 0.4s;
   cursor: pointer;
 }
-.button-error:hover{
+.button-error:hover {
   transform: scale(1.077);
   background-color: rgb(43, 43, 43);
-  color: #FFDCA8;
+  color: #ffdca8;
   box-shadow: 5px 5px rgba(0, 0, 0, 0.6);
 }
 
-.error-icon{
+.error-icon {
   width: 140px;
   height: 140px;
   margin-bottom: -90px;
-  color: #FF2C62;
+  color: #ff2c62;
   animation: slideDown 1.2s ease 1 forwards;
 }
 
@@ -101,7 +99,6 @@
     border: 3px solid wheat;
     padding: 15px;
     border-radius: 10px;
-
   }
 }
 
@@ -136,5 +133,27 @@
   }
   62% {
     transform: translate(-22px, 5px) skew(21deg);
+  }
+}
+
+@media (max-width: 500px) {
+  .error-container {
+    font-size: 47px;
+  }
+  .text-error {
+    font-size: 18px;
+    letter-spacing: 0px;
+    width: 80%;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    line-height: 30px;
+  }
+
+  .error-icon {
+    width: 90px;
+    height: 90px;
+    margin-top: 80px;
+    margin-bottom: -90px;
   }
 }

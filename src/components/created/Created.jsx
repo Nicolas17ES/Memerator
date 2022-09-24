@@ -9,7 +9,7 @@ function Created() {
     const restart = () => {
         dispatch({
                 type: 'SET_STATUS',
-                payload: 'memerator'
+                payload: 'upload'
             })
         dispatch({
                 type: 'SET_MEMETEXT',
@@ -26,6 +26,10 @@ function Created() {
         dispatch({
                 type: 'SET_IMAGENAME',
                 payload: '',
+            })
+        dispatch({
+                type: 'SET_LOADING',
+                payload: false,
             })
     }
 

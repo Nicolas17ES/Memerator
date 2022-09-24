@@ -254,12 +254,15 @@ body {
 /* END UPLOAD BLCOK DESIGN */
 
 /* START UPLOADED BLCOK DESIGN */
+
+
 .uploaded {
   width: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  /* position: relative; */
   /* border: 2px solid red; */
 }
 
@@ -469,7 +472,48 @@ body {
 }
 
 .preview {
-  transform: scale(1.4);
+  transform: scale(1.36);
+  z-index: 2000000;
+  transition: all .7s;
+  margin-bottom: 40px;
+}
+
+.hidden-blur{
+  display: none;
+}
+
+.blur-el {
+  min-width: 150vw;
+  min-height: 160vh;
+  background-color: black;
+  z-index: 20000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.close-blur-icon{
+  z-index: 200000;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  transition: all .4s;
+}
+.close-blur-icon:hover{
+  transform: scale(1.2);
+  color: rgb(252, 127, 127);
+}
+.blur-icon:hover{
+  color: rgb(252, 127, 127);
+}
+
+.blur-icon{
+  color: white;
+  width: 37px;
+  height: 37px;
 }
 
 /* END UPLOADED BLCOK DESIGN */
@@ -640,6 +684,11 @@ body {
     width: 440px;
     /* border: 2px solid red; */
   }
+  .preview {
+    transform: scale(1.2);
+
+  }
+
 
   .input-uploaded {
     width: 190px;
@@ -738,6 +787,11 @@ body {
   .uploaded {
     width: 400px;
   }
+  .preview {
+    transform: scale(1.14);
+
+  }
+
 
   .top {
     margin-bottom: 27px;
@@ -819,9 +873,8 @@ body {
 
 @media (max-width: 460px) {
   .memerator {
-  height: 80vh
-
-}
+    height: 80vh;
+  }
   /* START */
   .sub-title {
     font-size: 18px;
@@ -851,14 +904,13 @@ body {
     font-size: 38px;
   }
   .memeImage {
-  width: 100%;
-  max-height: 310px;
-}
+    width: 100%;
+    max-height: 310px;
+  }
 
   .upload-icon {
     width: 80px;
     height: 80px;
-
   }
   /* END UPLOAD */
 
@@ -866,6 +918,18 @@ body {
   .uploaded {
     width: 280px;
   }
+  .preview {
+    transform: scale(1.1);
+  }
+  .close-blur-icon{
+    z-index: 200000;
+    position: absolute;
+    right: 30px;
+    top: 70px;
+    cursor: pointer;
+    transition: all .4s;
+  }
+
   .input-uploaded {
     width: 130px;
     height: 30px;
@@ -878,7 +942,7 @@ body {
     font-size: 15px;
   }
   .shakeit2 {
-     margin-left: 10px;
+    margin-left: 10px;
     width: 80px;
     height: 32px;
     font-size: 15px;
@@ -894,12 +958,16 @@ body {
 
   .download-button {
     left: 26%;
-    bottom: -320px;
+    top: 597px;
+    height: 86px;
+
+
   }
 
   .download-button-left {
     right: 26%;
-    bottom: -320px;
+    top: 597px;
+    height: 86px;
   }
   /* END UPLOADED */
 

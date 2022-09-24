@@ -9,14 +9,17 @@ import MemeratorContext from '../../context/MemeratorContext'
 import * as htmlToImage from 'html-to-image';
 import {BsFillCloudDownloadFill} from 'react-icons/bs'
 import {MdOutlinePreview} from 'react-icons/md'
+import {AiFillCloseCircle} from 'react-icons/ai'
 
 
 
 function Uploaded() {
     const domEl = useRef(null); 
+    // const blurEl= useRef(null); 
     const {memeText, memeText2, isLoading, dispatch} = useContext(MemeratorContext);
     const [textOne, setTextOne] = useState(false)
     const [textTwo, setTextTwo] = useState(false)
+    const [blur, setBlur] = useState(false)
 
         useEffect(() => {
             if(memeText !== ''){
@@ -26,6 +29,8 @@ function Uploaded() {
                 setTextTwo(true)
             }
         }, [memeText, memeText2]);
+
+      
 
 
         const downloadImage = async () => {
@@ -74,12 +79,27 @@ function Uploaded() {
 
 
         // PREVIEW MEME
-        const preview = () => {
+          useEffect(() => {
+            if(blur){
+                    document.body.style.overflow = "hidden"
+                } else {
+                    document.body.style.overflowX = "hidden"
+                    document.body.style.overflowY = "scroll"
+                }
+            }, [blur]);
 
-            const button = domEl.current; 
-            button.className = "preview";
+
+        const preview = () => {
+            setBlur(true)
         }
         // PREVIEW MEME
+
+        // close preview meme
+        const closeBlur = () => {
+            setBlur(false)
+
+        }
+        // close preview meme
 
         if (isLoading){
             return (
@@ -121,17 +141,23 @@ function Uploaded() {
             
         } else {
             return(
+                <>
+                <div className={`${blur === true ? "blur-el" : "hidden-blur "}`} onClick={closeBlur}></div>
+                <div className={`${blur === true ? "close-blur-icon" : "hidden-blur "}`} onClick={closeBlur}><AiFillCloseCircle className="blur-icon"/></div>
                 <div className="uploaded"> 
+                
                 <button className="download-button" onClick={downloadImage}> <BsFillCloudDownloadFill className="download-icon"/> <p className="download-text">DOWNLOAD</p> </button>
                     <button className="change-text-button"  onClick={changeTextOne}>Change Top Text</button>          
-                    <div className="meme" ref={domEl}>                          
+                    <div className={blur ? "meme preview" : "meme"}  ref={domEl}>                          
                             <MemeText/>
                             <Image/>
                             <MemeText2/>
                     </div>
+                    
                      <button className="change-text-button"  onClick={changeTextTwo}>Change Bottom Text</button>
                 <button className="download-button-left" onClick={preview}> <MdOutlinePreview className="download-icon-left"/> <p className="preview-text">PREVIEW</p></button>
                 </div>
+                </>
             )
             
         }
