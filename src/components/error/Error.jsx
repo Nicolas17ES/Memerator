@@ -1,11 +1,17 @@
 import './NotFound.css'
 import {Link} from 'react-router-dom'
 import {TbFaceIdError} from 'react-icons/tb'
+import { motion } from "framer-motion";
 
 
 function Error() {
     return (
-        <div className="memerator">
+        <motion.div 
+        className="memerator"
+        initial={{ x: "100vw" }}
+            animate={{ x: 0 }}
+            transition={{ duration: .6}}
+        >
             <div className="errorPage">
                 <TbFaceIdError className="error-icon"/>
                 <p className="text-error">
@@ -13,7 +19,7 @@ function Error() {
                 </p>
                 <Link to="/"><button className="button-error">Go Back</button></Link>
             </div> 
-        </div>
+        </motion.div>
     )
 }
 

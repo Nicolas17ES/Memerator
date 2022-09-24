@@ -5,12 +5,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  min-height: 0;
+  min-width: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 100%;
 }
 
 body {
   font-family: "Bebas Neue", sans-serif;
   background-color: #ffdca8;
-  overflow-x: hidden;
+  position: relative;
 }
 
 /* MAIN PAGE STYLE */
@@ -200,6 +209,7 @@ body {
   color: #37cfff;
 }
 
+
 .upload-button {
   width: 160px;
   height: 60px;
@@ -278,7 +288,7 @@ body {
   box-shadow: 2px 2px rgba(0, 0, 0, 0.8);
   font-size: 19px;
   font-family: "Bebas Neue", sans-serif;
-  animation: fadein 1s;
+  /* animation: fadein 1s; */
 }
 .input-uploaded:focus {
   border: 2.5px solid rgb(51, 202, 248);
@@ -305,7 +315,7 @@ body {
   color: rgba(0, 0, 0, 0.67);
   font-weight: bold;
   box-shadow: 2px 2px rgba(155, 31, 62, 0.9);
-  animation: fadein 1s;
+  /* animation: fadein 1s; */
 }
 
 .shakeit2 {
@@ -357,7 +367,7 @@ body {
   position: relative;
   width: 100%;
   margin: 0;
-  animation: fadein 1s;
+  /* animation: fadein 1s; */
 }
 
 .memeImage {
@@ -392,7 +402,7 @@ body {
   border: 2px solid black;
   font-weight: bold;
   /* transition: all .4s; */
-  animation: fadein 1.6s;
+  /* animation: fadein 1.6s; */
   transition: all 0.4s;
 }
 
@@ -422,7 +432,7 @@ body {
   font-family: "Bebas Neue", sans-serif;
   transition: all 0.4s;
   cursor: pointer;
-  animation: slideDown 2s ease 1 forwards;
+  /* animation: slideDown 2s ease 1 forwards; */
 }
 .download-icon {
   width: 90px;
@@ -455,7 +465,7 @@ body {
   font-family: "Bebas Neue", sans-serif;
 
   cursor: pointer;
-  animation: slideDown 2s ease 1 forwards;
+  /* animation: slideDown 2s ease 1 forwards; */
 }
 .download-icon-left {
   width: 90px;
@@ -952,7 +962,7 @@ body {
     height: 30px;
     font-size: 17px;
     letter-spacing: 1px;
-    animation: fadein 1.6s;
+    /* animation: fadein 1.6s; */
     transition: all 0.4s;
   }
 

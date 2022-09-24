@@ -4,17 +4,13 @@ import ArrowLeft from '../shared/arrows/ArrowLeft'
 import Uploader from './ImageUpload'
 import Loader from '../shared/loader/Loader'
 import {FaLongArrowAltDown} from 'react-icons/fa'
+import { motion } from "framer-motion";
 
 
 function Upload() {
 
-    const {isLoading, dispatch} = useContext(MemeratorContext);
+    const {isLoading} = useContext(MemeratorContext);
 
-    // const [fileUploader, setFileUploader] = useState(false);
-    
-    // const showFileUploader = () => {
-    //     setFileUploader(true);
-    // }
 
     return isLoading ? (
         <div className="upload">
@@ -22,7 +18,12 @@ function Upload() {
         </div>
        
     ) : (
-        <div className="upload">
+        <motion.div
+            className="upload"
+            initial={{ x: "100vw" }}
+            animate={{ x: 0 }}
+            transition={{ duration: .6}}
+        >
             <div className="arrow-position">
                 <FaLongArrowAltDown className="upload-arrow"/>
             </div>
@@ -32,7 +33,7 @@ function Upload() {
                 {/* <Title text={'Upload a picture'} /> */}
             </div> 
             <Uploader/>
-        </div>
+        </motion.div>
     )
 }
 

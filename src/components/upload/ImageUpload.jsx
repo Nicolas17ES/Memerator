@@ -52,7 +52,7 @@ function ImageUpload() {
                         type: 'SET_LOADING',
                         payload: false
                     })
-                }, 1499)
+                }, 1629)
             } else {
                 dispatch({
                         type: 'SET_STATUS',

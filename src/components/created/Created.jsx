@@ -1,6 +1,6 @@
 import {useContext} from 'react';
 import MemeratorContext from '../../context/MemeratorContext'
-import {GiFinishLine} from 'react-icons/gi'
+import { motion } from "framer-motion";
 
 function Created() {
 
@@ -34,11 +34,16 @@ function Created() {
     }
 
     return (
-        <div className="generated">
+        <motion.div 
+            className="generated"
+            initial={{ x: "100vw" }}
+            animate={{ x: 0 }}
+            transition={{ duration: .6}}
+        >
             <h2 className="generated-title">THANK YOU</h2>
             {/* <GiFinishLine className="finish-line"/> */}
             <button className="keep-meming-button" onClick={restart}>Keep meming</button>
-        </div>
+        </motion.div>
     )
 }
 

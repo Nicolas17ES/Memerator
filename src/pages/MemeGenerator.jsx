@@ -10,6 +10,7 @@ import Created from '../components/created/Created'
 import Error from '../components/error/Error'
 
 
+
 function MemeGenerator() {
 
     // CONTEXT DATA

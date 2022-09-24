@@ -10,6 +10,8 @@ import * as htmlToImage from 'html-to-image';
 import {BsFillCloudDownloadFill} from 'react-icons/bs'
 import {MdOutlinePreview} from 'react-icons/md'
 import {AiFillCloseCircle} from 'react-icons/ai'
+import { motion } from "framer-motion";
+
 
 
 
@@ -57,7 +59,7 @@ function Uploaded() {
                         type: 'SET_LOADING',
                         payload: false
                     })
-                }, 1499)
+                }, 1629)
         }
 
         // RESET TEXTS
@@ -107,36 +109,51 @@ function Uploaded() {
             )
         } else if(!textOne && !textTwo){
             return (
-                <div className="uploaded"> 
+                <motion.div 
+                    className="uploaded"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: .6}}
+                > 
                     <Input />          
                     <div className="meme">
                             <Image/>
                     </div>
                     <Input2/>
-                </div>
+                </motion.div>
             )
         } else if (textOne && !textTwo) {
             return(
-                <div className="uploaded"> 
+                <motion.div 
+                    className="uploaded"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: .6}}
+                > 
                     <button className="change-text-button" onClick={changeTextOne}>Change Top Text</button>          
                     <div className="meme">
                             <MemeText/>
                             <Image/>
                     </div>
                     <Input2/>
-                </div>
+                </motion.div>
             )
             
         } else if (!textOne && textTwo) {
             return(
-                <div className="uploaded">
+                <motion.div 
+                    className="uploaded"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: .6}}
+                >
                     <Input/>           
                     <div className="meme">
                             <Image/>
                             <MemeText2/>
                     </div>
                     <button className="change-text-button"  onClick={changeTextTwo}>Change Bottom Text</button>
-                </div>
+                </motion.div>
             )
             
         } else {
@@ -144,7 +161,12 @@ function Uploaded() {
                 <>
                 <div className={`${blur === true ? "blur-el" : "hidden-blur "}`} onClick={closeBlur}></div>
                 <div className={`${blur === true ? "close-blur-icon" : "hidden-blur "}`} onClick={closeBlur}><AiFillCloseCircle className="blur-icon"/></div>
-                <div className="uploaded"> 
+                <motion.div 
+                    className="uploaded"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: .6}}
+                > 
                 
                 <button className="download-button" onClick={downloadImage}> <BsFillCloudDownloadFill className="download-icon"/> <p className="download-text">DOWNLOAD</p> </button>
                     <button className="change-text-button"  onClick={changeTextOne}>Change Top Text</button>          
@@ -156,7 +178,7 @@ function Uploaded() {
                     
                      <button className="change-text-button"  onClick={changeTextTwo}>Change Bottom Text</button>
                 <button className="download-button-left" onClick={preview}> <MdOutlinePreview className="download-icon-left"/> <p className="preview-text">PREVIEW</p></button>
-                </div>
+                </motion.div>
                 </>
             )
             
