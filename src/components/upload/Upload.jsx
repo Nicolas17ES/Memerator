@@ -14,7 +14,7 @@ function Upload() {
 
     return isLoading ? (
         <div className="upload">
-            <Loader/>
+            <Loader text={'Your image is a bit heavy, give us a few seconds to process it'}/>
         </div>
        
     ) : (
