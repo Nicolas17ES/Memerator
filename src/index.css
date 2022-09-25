@@ -720,8 +720,9 @@ body {
   /* UPLOADED */
   .download-button {
     left: 14%;
-    bottom: -200px;
-    gap: 0px;
+    top: 580px;
+    height: 96px;
+    gap: 6px;
     font-size: 17px;
     flex-direction: column-reverse;
     animation: none;
@@ -729,8 +730,9 @@ body {
 
   .download-button-left {
     right: 14%;
-    gap: 0px;
-    bottom: -200px;
+    gap: 6px;
+    top: 580px;
+    height: 96px;
     font-size: 17px;
     flex-direction: column-reverse;
     animation: none;
@@ -740,12 +742,12 @@ body {
     height: 64px;
   }
 
-  .download-text {
+  /* .download-text {
     display: none;
   }
   .preview-text {
     display: none;
-  }
+  } */
 
   /* END UPLOADED */
 }
@@ -811,12 +813,14 @@ body {
   }
   .download-button {
     left: 10%;
-    bottom: -180px;
+    top: 560px;
+    height: 96px;
   }
 
   .download-button-left {
     right: 10%;
-    bottom: -180px;
+    top: 560px;
+    height: 96px;
   }
   .download-icon {
     width: 57px;
@@ -856,12 +860,14 @@ body {
 
   .download-button {
     left: 26%;
-    bottom: -300px;
+    top: 660px;
+    height: 96px;
   }
 
   .download-button-left {
     right: 26%;
-    bottom: -300px;
+    top: 660px;
+    height: 96px;
   }
   .download-icon {
     width: 50px;
@@ -881,7 +887,26 @@ body {
   /* END UPLOADED */
 }
 
-@media (max-width: 460px) {
+
+
+@media (max-height: 900px) and (max-width: 480px) {
+    .download-button {
+    left: 26%;
+    top: 767px;
+    height: 86px;
+
+
+  }
+
+  .download-button-left {
+    right: 26%;
+    top: 767px;
+    height: 86px;
+  }
+}
+
+
+@media (max-height: 720px) and  (max-width: 460px) {
   .memerator {
     height: 80vh;
   }
@@ -987,3 +1012,5 @@ body {
     letter-spacing: 1px;
   }
 }
+
+

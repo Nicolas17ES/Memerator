@@ -42,7 +42,7 @@ function ImageUpload() {
                     })
                     dispatch({
                         type: 'SET_IMAGEPATH',
-                        payload: `http://localhost:8000/upload/${file.name.replace(/ /g, "")}`
+                        payload: `https://memerator-backend.herokuapp.com/upload/${file.name.replace(/ /g, "")}`
                     })
                     dispatch({
                         type: 'SET_STATUS',
