@@ -8,7 +8,7 @@ function Loader({text}) {
     const [displayText, setDisplayText] = useState(false)
 
 
-    setTimeout(function(){ setDisplayText(true) }, 300);
+    setTimeout(function(){ setDisplayText(true) }, 5000);
 
     return (
         <motion.div 
