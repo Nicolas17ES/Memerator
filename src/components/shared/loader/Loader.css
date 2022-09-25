@@ -1,4 +1,12 @@
-
+.loaderPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 70px;
+    gap: 60px;
+    height: 80vh;
+}
 
 .loader {
     width: 16em;
@@ -54,4 +62,8 @@
 @keyframes rotating {
     0%, 10% {transform: rotate(0deg);}
     60%, 100% {transform: rotate(-1turn);}
+}
+
+.load-error{
+
 }

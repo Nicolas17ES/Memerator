@@ -22,7 +22,7 @@ function Loader({text}) {
                 <span className="spanOne"></span>
                 <span className="spanOne"></span>
             </div>
-            {displayText && <p className="message">{textError}</p>}
+            {displayText && <p className="message load-error">{textError}</p>}
         </motion.div>
         
     )
